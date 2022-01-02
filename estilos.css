@@ -1,0 +1,89 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(6, auto);
+    
+}
+
+.header{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    color:blue;
+    border-bottom :solid 3px blue;
+    text-shadow: 2px 5px 10px blue;
+    height: 80px;
+    text-align: center;
+}
+
+.form{
+    background-color: black;
+    
+}
+.Select-shape{
+    grid-column: span 3;    
+    text-align: center;
+}
+
+h2{
+    color: #fff;
+}
+
+label{
+    color: #fff;
+}
+
+#id_shapes{
+    background-color:blue;
+    color: #fff;
+    height: 35px;
+    width: 95px;
+    border: none;
+    border-radius: 10px;
+
+}
+#figura{
+    background-color:blue;
+    color: #fff;
+    height: 35px;
+    width: 95px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+#id_output{
+    background-color:black;
+    text-align: center;
+    font-size: 30px;  
+    color:#fff;
+    border-bottom: 2px  solid blue;
+}
+
+#botonPerim{
+    background-color:black;
+    text-align: center;
+    font-size: 30px;  
+    color: #fff;
+    border-bottom: 2px  solid blue;
+}
+
+input{
+    background-color: rgb(0, 0, 255);
+    color: white;
+    height: 35px;
+    width: 130px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}

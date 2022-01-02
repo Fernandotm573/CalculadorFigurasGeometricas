@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area and perimeter of a Shape</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+  
+    <div class="container">
+        <div class='header'>
+            <h1>Calculador de Figuras Geometricas</h1>
+        </div>
+        
+<form
+    class="form" 
+    action="javascript:updateForm()" 
+    onchange="javascript:updateForm()"
+    >
+    
+     <!--Area seleccion -->
+    <div class='Select-shape'>
+      <label for="id_shapes">Select a shape Area</label>
+      <select id="id_shapes">
+          <option value="circle" selected>Circle</option>
+          <option value="triangle">Triangle</option>
+          <option value="square" >Square</option>
+          <option value="rectangle">Rectangle</option>
+          <option value="diamond">Diamond</option>
+      </select>
+    </div>
+    <br><br>
+            
+     <!--Perimetro seleccion -->
+    <div class='Select-shape'>
+        <label for="figura">Select a shape Perimetro</label>
+        <select id="figura">
+            <option value="circulo"selected >Circulo</option> 
+            <option value="triangulo">Triangulo</option> 
+            <option value="cuadrado" >Cuadrado</option> 
+            <option value="rectangulo">Rectangulo</option>  
+            <option value="rombo">Rombo</option>               
+        </select>
+    </div>
+      <br><br>
+         
+                   <!--AREA CIRCULO-->
+    <div id="id_inputs_circle" hidden>
+        <label for="id_radius">Radius</label>
+        <input id="id_radius" type="number" min="0" step="any">
+        <h2><em>A = &Pi;r<sup>2</sup> <sup>²</sup> </em></h2>
+    </div>
+                  <!--AREA TRIANGULO-->
+    <div id="id_inputs_triangle" hidden>
+        <label for="id_base">Base</label>
+        <input id="id_base" type="number" min="0" step="any">
+        <label for="id_height">Height</label>
+        <input id="id_height" type="number" min="0" step="any">
+        <h2><em>A = <sup>bh</sup>&frasl;<sub>2</sub></em></h2>
+    </div>
+         
+         <!--AREA CUADRADO-->
+    <div id="id_inputs_square" hidden>
+        <label for="id_side">Side</label>
+        <input id="id_side" type="number" min="0" step="any">
+        <h2><em>A = s<sup>2</sup></em></h2>
+    </div>
+     
+          <!--AREA RECTANGULO-->
+    <div id="id_inputs_rectangle" hidden>
+        <label for="id_length">Length</label>
+        <input id="id_length" type="number" min="0" step="any">
+        <label for="id_width">Width</label>
+        <input id="id_width" type="number" min="0" step="any">
+        <h2><em>A = lw</em></h2>
+    </div>
+
+               <!--AREA ROMBO-->
+        <div id="id_inputs_diamond" hidden>
+            <label for="DM">DiagMayor</label>
+            <input id="DM" type="number" min="0" step="any">
+            <label for="dm">DiagMenor</label>
+            <input id="dm" type="number" min="0" step="any">
+            <h2><em>A =<sup>DM*dm</sup> <sup>/2</sup>  </em></h2> 
+        </div>
+
+    <input type="submit" value="Calculate Area" class="input" id='btnArea'>cms²</input>
+    <p id="id_output"></p>
+                           
+                         <!--PERIMETROS-->
+           
+            <!--PERIMETRO CIRCULO-->
+        <div id="perimetroCirculo" hidden>
+             <label for="diam">DimP</label>
+             <input id="diam" type="number" min="0" step="any">
+             <h2><em>P = &Pi;d<sup>2</sup></em></h2>
+        </div>
+
+             <!--PERIMETRO CUADRADO-->
+        <div id="perimetroCuadrado" hidden>
+            <label for="lado">LadoPm</label>
+            <input id="lado" type="number" min="0" step="any">
+            <h2><em>P = Li<sup>²</sup></em></h2>
+        </div>
+
+            <!--PERIMETRO TRIANGULO EQUILATERO-->
+    <div id="perimetroTriangulo" hidden>
+        <label for="lado1">Lado1</label>
+        <input id="lado1" type="number" min="0" step="any">
+         <h2> <em>P = <sup>L</sup> <sup>*</sup> <sup>3</sup> </em> </h2>
+    </div>
+
+
+             <!--PERIMETRO RECTANGULO-->
+    <div id="perimetroRectangulo" hidden>
+        <label for="longitud">Longitud</label>
+        <input id="longitud" type="number" min="0" step="any">
+        <label for="ancho">Ancho</label>
+        <input id="ancho" type="number" min="0" step="any">
+        <h2><em>P = <sup>l*2</sup> <sup>+</sup> <sup>a*2</sup> </em></h2>
+    </div>
+
+      <!--PERIMETRO ROMBO-->
+      <div id="perimetroRombo" hidden>
+        <label for="ladoR">LadoR</label>
+        <input id="ladoR" type="number" min="0" step="any">
+        <h2><em>P = L*<sup>4</sup></em></h2>   
+    </div>
+        
+
+       <!-- Boton de Perimetro-->
+    <input type="submit" value="Calcular Perimetro" class="input" id='btnPerimetro'></input>
+    <p id="botonPerim"></p>
+        
+</form>
+
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
